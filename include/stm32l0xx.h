@@ -211,6 +211,8 @@ typedef enum
 
 #define MODIFY_REG(REG, CLEARMASK, SETMASK)  WRITE_REG((REG), (((READ_REG(REG)) & (~(CLEARMASK))) | (SETMASK)))
 
+#define SET_FIELD(reg, mask, value) ((reg) = ((reg) & ~(mask)) | ((value) & (mask)))
+
 /**
   * @}
   */

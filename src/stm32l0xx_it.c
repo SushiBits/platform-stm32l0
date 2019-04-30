@@ -59,7 +59,7 @@ __attribute__((noreturn)) void Reset_IRQHandler(void)
 		memset(item->dst, 0, item->size);
 	}
 
-	RCC->APBENR2 |= RCC_APBENR2_SYSCFGEN;
+	RCC->APB2ENR |= RCC_APB2ENR_SYSCFGEN;
 	SET_FIELD(SYSCFG->CFGR1, SYSCFG_CFGR1_MEM_MODE_Msk, (0b11 << SYSCFG_CFGR1_MEM_MODE_Pos));
 
 	SystemCoreClockUpdate();
