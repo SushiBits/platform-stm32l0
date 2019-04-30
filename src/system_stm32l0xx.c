@@ -132,7 +132,7 @@
   * @param  None
   * @retval None
   */
-void SystemInit (void)
+__attribute__((weak)) void SystemInit (void)
 {
 /*!< Set MSION bit */
   RCC->CR |= (uint32_t)0x00000100U;
