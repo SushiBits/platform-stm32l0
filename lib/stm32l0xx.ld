@@ -148,5 +148,4 @@ SECTIONS
 	
     /* Stack */
     PROVIDE(__stack = ORIGIN(IRAM) + LENGTH(IRAM));
-    PROVIDE(__heap_end = 0);
 }
